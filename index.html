@@ -39,6 +39,7 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    
   </style>
 </head>
 <body class="bg-neutral-50 text-neutral-900">
@@ -290,7 +291,17 @@
 
       try {
         await Promise.all([postFormspree(fd), postSheets(fd)]);
-window.location.href = "/thank-you.html";
+
+// Fade out the form
+form.classList.add('fade-out');
+
+// Wait 3 seconds, then redirect
+setTimeout(() => {
+  window.location.href = "/thank-you.html";
+}, 3000);
+
+
+
         form.reset();
       } catch (err) {
         errorMsg?.classList.remove('hidden');
