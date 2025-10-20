@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Handcrafted Wooden Kitchen Tables & Benches — Belfast, Northern Ireland | Galánta Woodworks</title>
-  <meta name="description" content="Handcrafted wooden kitchen tables and benches made to order in Belfast with delivery across Northern Ireland. Solid oak, ash and walnut with durable, food-safe finishes." />
-  <meta name="keywords" content="handmade dining tables Belfast, kitchen tables Northern Ireland, wooden benches, solid oak table, extendable dining table, farmhouse table, modern dining table" />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Handcrafted solid-wood kitchen and dining tables with matching benches. Built to order in Belfast with delivery and installation across the Belfast Metropolitan Area and Northern Ireland." />
+  <meta name="keywords" content="handmade dining tables Belfast, kitchen tables Northern Ireland, wooden benches, solid oak table Belfast, extendable dining table, farmhouse table, modern dining table, bespoke furniture Belfast" />
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://galanta.github.io/" />
+  <link rel="preload" as="image" href="/images/hero-table.jpg" imagesrcset="/images/hero-table.jpg 1200w" imagesizes="(min-width: 768px) 50vw, 100vw" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Galánta Woodworks — Handmade Dining Tables in Belfast" />
@@ -17,132 +18,103 @@
   <meta property="og:url" content="https://galanta.github.io/" />
   <meta property="og:image" content="/images/og-cover.jpg" />
   <meta property="og:locale" content="en_GB" />
+  <meta name="theme-color" content="#5C3A1E" />
 
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Galánta colour system -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-brown': '#5C3A1E',
+            'brand-brown-dark': '#4A2F19',
+            'brand-cream': '#F9F6F1',
+            'brand-amber': '#B18247'
+          },
+          boxShadow: {
+            'soft': '0 6px 20px rgba(0,0,0,0.08)',
+            'lift': '0 10px 30px rgba(0,0,0,0.12)'
+          }
+        }
+      }
+    }
+  </script>
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🪵</text></svg>'">
 
-  <!-- LocalBusiness Schema -->
+  <!-- LocalBusiness + ContactPoint + SiteNavigationElement -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Galánta Woodworks",
-  "image": "https://galanta.github.io/images/og-cover.jpg",
-  "description": "Handcrafted wooden kitchen tables and benches made to order in Belfast, Northern Ireland.",
-  "url": "https://galanta.github.io/",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Belfast",
-    "addressRegion": "Northern Ireland",
-    "addressCountry": "GB"
-  },
-  "areaServed": [
-    "Belfast Metropolitan Area",
-    "Northern Ireland"
-  ],
-  "sameAs": [
-    "https://instagram.com/your-handle"
-  ]
-}
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Galánta Woodworks",
+    "image": "https://galanta.github.io/images/og-cover.jpg",
+    "description": "Handcrafted wooden kitchen tables and benches made to order in Belfast, Northern Ireland.",
+    "url": "https://galanta.github.io/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Belfast",
+      "addressRegion": "Northern Ireland",
+      "addressCountry": "GB"
+    },
+    "areaServed": ["Belfast Metropolitan Area","Northern Ireland"],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@example.com",
+      "areaServed": ["Belfast Metropolitan Area","Northern Ireland"],
+      "availableLanguage": ["en-GB"]
+    }],
+    "sameAs": ["https://instagram.com/your-handle"]
+  }
   </script>
 
-  <!-- ImageObject Schema (silent locality signals via metadata) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["Tables","Benches","About","Contact"],
+    "url": [
+      "https://galanta.github.io/#tables",
+      "https://galanta.github.io/#benches",
+      "https://galanta.github.io/#about",
+      "https://galanta.github.io/#contact"
+    ]
+  }
+  </script>
+
+  <!-- ImageObject graph (kept) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "ImageObject",
-        "name": "Handcrafted wooden dining table — oak",
-        "contentUrl": "https://galanta.github.io/images/hero-table.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Elmstead farmhouse table — solid oak",
-        "contentUrl": "https://galanta.github.io/images/table-elmstead.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Nordic Edge dining table — ash",
-        "contentUrl": "https://galanta.github.io/images/table-nordic.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Gather extendable dining table — solid wood",
-        "contentUrl": "https://galanta.github.io/images/table-extendable.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Riveted bench — solid wood",
-        "contentUrl": "https://galanta.github.io/images/bench-riveted.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Slab bench — live edge",
-        "contentUrl": "https://galanta.github.io/images/bench-slab.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Minimal bench — oak",
-        "contentUrl": "https://galanta.github.io/images/bench-minimal.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      },
-      {
-        "@type": "ImageObject",
-        "name": "Workshop — tools and hardwood boards",
-        "contentUrl": "https://galanta.github.io/images/workshop.jpg",
-        "contentLocation": "Belfast, Northern Ireland",
-        "inLanguage": "en-GB",
-        "author": {"@type":"Organization","name":"Galánta Woodworks"}
-      }
+      {"@type":"ImageObject","name":"Handcrafted wooden dining table — oak","contentUrl":"https://galanta.github.io/images/hero-table.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Elmstead farmhouse table — solid oak","contentUrl":"https://galanta.github.io/images/table-elmstead.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Nordic Edge dining table — ash","contentUrl":"https://galanta.github.io/images/table-nordic.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Gather extendable dining table — solid wood","contentUrl":"https://galanta.github.io/images/table-extendable.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Riveted bench — solid wood","contentUrl":"https://galanta.github.io/images/bench-riveted.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Slab bench — live edge","contentUrl":"https://galanta.github.io/images/bench-slab.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Minimal bench — oak","contentUrl":"https://galanta.github.io/images/bench-minimal.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}},
+      {"@type":"ImageObject","name":"Workshop — tools and hardwood boards","contentUrl":"https://galanta.github.io/images/workshop.jpg","contentLocation":"Belfast, Northern Ireland","inLanguage":"en-GB","author":{"@type":"Organization","name":"Galánta Woodworks"}}
     ]
   }
   </script>
 
-  <!-- Optional FAQ schema (not visible; pure SEO) -->
+  <!-- FAQ (kept) -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Do you deliver and install?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver and install across Belfast and Northern Ireland."}
-      },
-      {
-        "@type":"Question",
-        "name":"What hardwoods do you use?",
-        "acceptedAnswer":{"@type":"Answer","text":"We work with FSC/PEFC-sourced oak, ash and walnut with durable, food-safe finishes."}
-      }
-    ]
-  }
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"Do you deliver and install?","acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver and install across Belfast and Northern Ireland."}},
+    {"@type":"Question","name":"What hardwoods do you use?","acceptedAnswer":{"@type":"Answer","text":"We work with FSC/PEFC-sourced oak, ash and walnut with durable, food-safe finishes."}}
+  ]}
   </script>
 
   <style>
     html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
   </style>
 </head>
 
@@ -156,16 +128,16 @@
   })();
 </script>
 
-<body class="bg-neutral-50 text-neutral-900">
+<body class="bg-brand-cream text-neutral-900">
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#home" class="text-xl font-semibold tracking-tight">Galánta <span class="text-neutral-500">Woodworks</span></a>
+      <a href="#home" class="text-xl font-semibold tracking-tight text-brand-brown">Galánta <span class="text-neutral-600">Woodworks</span></a>
       <button id="navToggle" class="md:hidden p-2 rounded-lg border border-neutral-200" aria-label="Open Menu">☰</button>
-      <nav id="nav" class="hidden md:flex items-center gap-6">
-        <a href="#tables" class="hover:opacity-70">Tables</a>
-        <a href="#benches" class="hover:opacity-70">Benches</a>
-        <a href="#about" class="hover:opacity-70">About</a>
-        <a href="#contact" class="hover:opacity-70">Contact</a>
+      <nav id="nav" class="hidden md:flex items-center gap-6" aria-label="Primary">
+        <a href="#tables" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Tables</a>
+        <a href="#benches" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Benches</a>
+        <a href="#about" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">About</a>
+        <a href="#contact" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Contact</a>
       </nav>
     </div>
     <div id="mobileNav" class="md:hidden hidden border-t border-neutral-200">
@@ -177,52 +149,61 @@
       </div>
     </div>
   </header>
-  <section aria-label="Location and delivery" class="border-b border-neutral-200 bg-white/80">
-  <div class="max-w-6xl mx-auto px-4 py-2 text-sm text-neutral-700">
-    Based in <strong>Belfast</strong> — delivery across the <strong>Belfast Metropolitan Area</strong> and throughout <strong>Northern Ireland</strong>.
-  </div>
-</section>
+
+  <!-- Delivery banner with soft gradient + high contrast -->
+  <section aria-label="Location and delivery" class="bg-gradient-to-r from-brand-brown-dark to-brand-brown text-white shadow-soft">
+    <div class="max-w-6xl mx-auto px-4 py-2 text-sm text-center">
+      Delivery available across <strong>Belfast</strong>, the <strong>Belfast Metropolitan Area</strong>, and throughout <strong>Northern Ireland</strong>.
+    </div>
+  </section>
+
   <section id="home" class="relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight">Handcrafted wooden kitchen tables & benches — built in Belfast. Built to last.</h1>
-        <p class="mt-4 text-neutral-600">Each Galánta piece is built to order in our Belfast workshop, using responsibly sourced natural materials. Designed to live with you for decades.</p>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-neutral-900">Handcrafted wooden kitchen tables & benches — built in Belfast. Built to last.</h1>
+        <p class="mt-4 text-neutral-700">Each Galánta piece is built to order in our Belfast workshop, using responsibly sourced natural materials. Designed to live with you for decades.</p>
         <div class="mt-8 flex gap-3">
-          <a href="#tables" class="inline-block rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:bg-neutral-800">Browse Tables</a>
+          <a href="#tables" class="inline-block rounded-2xl px-5 py-3 bg-brand-brown text-white hover:bg-brand-brown-dark shadow-soft hover:shadow-lift transition will-change-transform">Browse Tables</a>
           <a href="#contact" class="inline-block rounded-2xl px-5 py-3 border border-neutral-300 hover:bg-neutral-100">Request a Quote</a>
         </div>
       </div>
-      <div class="rounded-3xl overflow-hidden shadow-lg border border-neutral-200">
-        <img src="/images/hero-table.jpg" alt="Handcrafted wooden kitchen table" class="w-full h-full object-cover" />
-      </div>
+      <figure class="rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition border border-neutral-200 bg-white">
+        <img src="/images/hero-table.jpg" alt="Solid oak dining table crafted in Belfast" width="1200" height="800" loading="eager" decoding="async" class="w-full h-full object-cover" />
+        <figcaption class="sr-only">Handcrafted solid-wood dining table</figcaption>
+      </figure>
     </div>
   </section>
 
   <section id="tables" class="py-16 border-t border-neutral-200 bg-white">
     <div class="max-w-6xl mx-auto px-6 md:px-8">
       <div class="flex items-end justify-between gap-6">
-        <h2 class="text-3xl font-semibold">Tables</h2>
+        <h2 class="text-3xl font-semibold text-neutral-900">Tables</h2>
+        
       </div>
+
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/table-elmstead.jpg" alt="Elmstead farmhouse table" class="h-56 w-full object-cover" />
+        <!-- Card -->
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/table-elmstead.jpg" alt="Elmstead solid oak farmhouse table" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Elmstead Farmhouse Table</h3>
-            <p class="mt-1 text-sm text-neutral-600">6ft solid oak table with matte hand-oiled finish. Classic turned or square legs.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Elmstead Farmhouse Table</h3>
+            <p class="mt-1 text-sm text-neutral-700">6ft solid oak, matte hand-oiled finish. Classic turned or square legs.</p>
           </div>
         </article>
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/table-nordic.jpg" alt="Nordic Edge dining table" class="h-56 w-full object-cover" />
+
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/table-nordic.jpg" alt="Nordic Edge ash dining table with chamfered edge" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Nordic Edge Dining Table</h3>
-            <p class="mt-1 text-sm text-neutral-600">Scandi-inspired ash top with chamfered edge and tapered legs.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Nordic Edge Dining Table</h3>
+            <p class="mt-1 text-sm text-neutral-700">Scandi-inspired ash top with chamfered edge and tapered legs.</p>
           </div>
         </article>
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/table-extendable.jpg" alt="Extendable dining table" class="h-56 w-full object-cover" />
+
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/table-extendable.jpg" alt="Extendable solid-wood dining table with hidden leaves" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Gather Extendable</h3>
-            <p class="mt-1 text-sm text-neutral-600">Clean-lined dining table with hidden extension leaves for hosting.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Gather Extendable</h3>
+            <p class="mt-1 text-sm text-neutral-700">Clean-lined table with hidden extension leaves for hosting.</p>
           </div>
         </article>
       </div>
@@ -232,28 +213,31 @@
   <section id="benches" class="py-16 border-t border-neutral-200">
     <div class="max-w-6xl mx-auto px-6 md:px-8">
       <div class="flex items-end justify-between gap-6">
-        <h2 class="text-3xl font-semibold">Benches</h2>
+        <h2 class="text-3xl font-semibold text-neutral-900">Benches</h2>
       </div>
+
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/bench-riveted.jpg" alt="Riveted bench" class="h-56 w-full object-cover" />
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/bench-riveted.jpg" alt="Riveted solid-wood bench with exposed joinery" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Riveted Bench</h3>
-            <p class="mt-1 text-sm text-neutral-600">Exposed joinery details and a sturdy stance — built to match The Elmstead.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Riveted Bench</h3>
+            <p class="mt-1 text-sm text-neutral-700">Exposed joinery details and a sturdy stance — built to match The Elmstead.</p>
           </div>
         </article>
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/bench-slab.jpg" alt="Slab bench" class="h-56 w-full object-cover" />
+
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/bench-slab.jpg" alt="Live-edge slab bench in solid hardwood" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Slab Bench</h3>
-            <p class="mt-1 text-sm text-neutral-600">Single-slab top with softened live edge and stabilising bowties.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Slab Bench</h3>
+            <p class="mt-1 text-sm text-neutral-700">Single-slab top with softened live edge and stabilising bowties.</p>
           </div>
         </article>
-        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-neutral-50 hover:shadow-md transition">
-          <img src="/images/bench-minimal.jpg" alt="Minimal bench" class="h-56 w-full object-cover" />
+
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="/images/bench-minimal.jpg" alt="Minimal oak bench with tapered legs" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg">The Minimal Bench</h3>
-            <p class="mt-1 text-sm text-neutral-600">Lightweight silhouette with tapered legs and rounded corners.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Minimal Bench</h3>
+            <p class="mt-1 text-sm text-neutral-700">Lightweight silhouette with tapered legs and rounded corners.</p>
           </div>
         </article>
       </div>
@@ -263,39 +247,40 @@
   <section id="about" class="py-16 border-t border-neutral-200 bg-white">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div>
-        <h2 class="text-3xl font-semibold">Crafted with precision, finished with care</h2>
+        <h2 class="text-3xl font-semibold text-neutral-900">Crafted with precision, finished with care</h2>
         <p class="mt-4 text-neutral-700">Each Galánta table and bench is made to order in our Belfast workshop using responsibly sourced oak, ash, and walnut. Every piece is joined, finished, and inspected by hand to ensure durability for everyday family life.</p>
         
       </div>
-      <div class="rounded-3xl overflow-hidden shadow-lg border border-neutral-200">
-        <img src="/images/workshop.jpg" alt="Woodworking workshop with hand tools and hardwood boards" class="w-full h-full object-cover" />
-      </div>
+      <figure class="rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition border border-neutral-200 bg-white">
+        <img src="/images/workshop.jpg" alt="Belfast workshop — hand tools and hardwood boards" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+        <figcaption class="sr-only">Workshop detail</figcaption>
+      </figure>
     </div>
   </section>
 
   <section id="contact" class="py-16 border-t border-neutral-200">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-3xl font-semibold">Get a quote</h2>
+      <h2 class="text-3xl font-semibold text-neutral-900">Get a quote</h2>
       <p class="mt-2 text-neutral-700">Tell us what you’re after — the model, dimensions, and wood. We’ll get back with a lead time and quote.</p>
 
-      <form id="quoteForm" class="mt-8 grid gap-4 bg-neutral-50 p-6 rounded-3xl border border-neutral-200">
+      <form id="quoteForm" class="mt-8 grid gap-4 bg-brand-cream p-6 rounded-3xl border border-neutral-200 shadow-soft">
         <input type="hidden" name="_subject" value="New quote request — Galánta" />
         <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
 
         <div class="grid md:grid-cols-2 gap-4">
           <div>
             <label class="block text-sm mb-1" for="name">Name</label>
-            <input id="name" name="name" required class="w-full rounded-xl border border-neutral-300 px-3 py-2" />
+            <input id="name" name="name" required class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber" />
           </div>
           <div>
             <label class="block text-sm mb-1" for="email">Email</label>
-            <input id="email" name="email" type="email" required class="w-full rounded-xl border border-neutral-300 px-3 py-2" />
+            <input id="email" name="email" type="email" required class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber" />
           </div>
         </div>
 
         <div>
           <label class="block text-sm mb-1" for="model">Model</label>
-          <select id="model" name="model" class="w-full rounded-xl border border-neutral-300 px-3 py-2">
+          <select id="model" name="model" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
             <option>The Elmstead Farmhouse Table</option>
             <option>The Nordic Edge Dining Table</option>
             <option>The Gather Extendable</option>
@@ -309,15 +294,26 @@
         <div class="grid md:grid-cols-3 gap-4">
           <div>
             <label class="block text-sm mb-1" for="length">Length (ft)</label>
-            <input id="length" name="length" class="w-full rounded-xl border border-neutral-300 px-3 py-2" placeholder="e.g. 6" />
+            <select id="length" name="length" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
           </div>
           <div>
             <label class="block text-sm mb-1" for="wood">Wood</label>
-            <input id="wood" name="wood" class="w-full rounded-xl border border-neutral-300 px-3 py-2" placeholder="Oak / Ash / Walnut" />
+            <select id="wood" name="wood" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
+            <option>Oak</option>
+            <option>Ash</option>
+            <option>Walnut</option>
+          </select>
           </div>
           <div>
             <label class="block text-sm mb-1" for="finish">Finish</label>
-            <input id="finish" name="finish" class="w-full rounded-xl border border-neutral-300 px-3 py-2" placeholder="Hardwax oil" />
+            <select id="finish" name="finsih" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
+            <option>Hardwax oil</option>
+            <option>Untreated</option>
+          </select>
           </div>
         </div>
 
@@ -327,7 +323,7 @@
         </div>
 
         <div class="flex items-center gap-3">
-          <button class="rounded-2xl px-5 py-3 bg-neutral-900 text-white hover:bg-neutral-800" type="submit">Send request</button>
+          <button class="rounded-2xl px-5 py-3 bg-brand-brown text-white hover:bg-brand-brown-dark shadow-soft hover:shadow-lift transition" type="submit">Send request</button>
         </div>
 
         <p id="formSuccess" class="hidden text-green-700 text-sm mt-2">Thanks! We’ll be in touch.</p>
@@ -337,39 +333,48 @@
   </section>
 
   <footer class="border-t border-neutral-200 bg-white">
-  <div class="max-w-6xl mx-auto px-4 py-10 text-center text-sm text-neutral-600">
-    <div class="space-y-4">
-      <div>
-        <div class="font-semibold text-neutral-900">Galánta Woodworks</div>
-        <p class="mt-2">Solid wood furniture, made to order in Belfast.<br>
-        Delivery across the Belfast Metropolitan Area & Northern Ireland.</p>
-      </div>
-
-      <div class="flex justify-center gap-6">
-        <nav>
-          <div class="font-semibold text-neutral-900 mb-1">Explore</div>
-          <ul class="space-y-1">
-            <li><a href="#tables" class="hover:underline">Tables</a></li>
-            <li><a href="#benches" class="hover:underline">Benches</a></li>
-            <li><a href="#about" class="hover:underline">About</a></li>
-            <li><a href="#contact" class="hover:underline">Contact</a></li>
-          </ul>
-        </nav>
-
+    <div class="max-w-6xl mx-auto px-4 py-10 text-center text-sm text-neutral-600">
+      <div class="space-y-4">
         <div>
-          <div class="font-semibold text-neutral-900 mb-1">Follow</div>
-          <ul class="space-y-1">
-            <li><a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="hover:underline">Instagram</a></li>
-          </ul>
+          <div class="font-semibold text-neutral-900">Galánta Woodworks</div>
+          <p class="mt-2">Solid wood furniture, made to order in Belfast.<br>Delivery across the Belfast Metropolitan Area & Northern Ireland.</p>
+        </div>
+
+        <div class="flex justify-center gap-6">
+          <nav aria-label="Footer">
+            <div class="font-semibold text-neutral-900 mb-1">Explore</div>
+            <ul class="space-y-1">
+              <li><a href="#tables" class="hover:underline">Tables</a></li>
+              <li><a href="#benches" class="hover:underline">Benches</a></li>
+              <li><a href="#about" class="hover:underline">About</a></li>
+              <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div>
+            <div class="font-semibold text-neutral-900 mb-1">Follow</div>
+            <ul class="space-y-1">
+              <li><a href="https://instagram.com/your-handle" target="_blank" rel="noopener" class="hover:underline">Instagram</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="text-center text-xs text-neutral-500 pb-8">
+      © <span id="year"></span> Galánta Woodworks — Belfast, Northern Ireland.
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA (trending pattern) -->
+  <div class="fixed bottom-3 inset-x-3 md:hidden">
+    <a href="#contact" class="block text-center rounded-2xl px-5 py-3 bg-brand-brown text-white shadow-lift">Get a quote — delivery across Belfast & NI</a>
   </div>
 
-  <div class="text-center text-xs text-neutral-500 pb-8">
-    © <span id="year"></span> Galánta Woodworks — Belfast, Northern Ireland.
-  </div>
-</footer>
+  <!-- Back-to-top button -->
+  <button id="toTop" aria-label="Back to top" class="hidden fixed bottom-20 right-4 rounded-full p-3 bg-white border border-neutral-200 shadow-soft hover:shadow-lift">
+    ↑
+  </button>
 
   <script>
     const navToggle = document.getElementById('navToggle');
@@ -380,44 +385,36 @@
     const form = document.getElementById('quoteForm');
     const success = document.getElementById('formSuccess');
     const errorMsg = document.getElementById('formError');
-
     const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mkgqanrv';
     const SHEETS_WEBAPP_URL = '';
 
     async function postFormspree(fd){
-      return fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: fd
-      });
+      return fetch(FORMSPREE_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd });
     }
-
     async function postSheets(fd){
       if(!SHEETS_WEBAPP_URL) return Promise.resolve();
       const obj = Object.fromEntries(fd.entries());
-      return fetch(SHEETS_WEBAPP_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(obj)
-      });
+      return fetch(SHEETS_WEBAPP_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(obj) });
     }
-
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       success?.classList.add('hidden');
       errorMsg?.classList.add('hidden');
-
       const fd = new FormData(form);
-
       try {
         await Promise.all([postFormspree(fd), postSheets(fd)]);
-        form.classList.add('fade-out');
+        form.classList.add('opacity-70');
         setTimeout(() => { window.location.href = "thank_you.html"; }, 500);
         form.reset();
-      } catch (err) {
-        errorMsg?.classList.remove('hidden');
-      }
+      } catch (err) { errorMsg?.classList.remove('hidden'); }
     });
+
+    // Back-to-top visibility + smooth scroll
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 700) toTop.classList.remove('hidden'); else toTop.classList.add('hidden');
+    });
+    toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
