@@ -42,6 +42,17 @@
     
   </style>
 </head>
+<base id="dynamic-base" href="./">
+<script>
+  (function () {
+    // If hosted at https://user.github.io/repo/..., set base to "/repo/"
+    const parts = location.pathname.split("/").filter(Boolean);
+    // A GitHub Pages "project page" path looks like: /<repo>/... (parts[0] = repo)
+    const isGitHubPages = location.hostname.endsWith("github.io");
+    const base = (isGitHubPages && parts.length > 0) ? ("/" + parts[0] + "/") : "./";
+    document.getElementById("dynamic-base")?.setAttribute("href", base);
+  })();
+</script>
 <body class="bg-neutral-50 text-neutral-900">
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -295,8 +306,8 @@ form.classList.add('fade-out');
 
 // Wait 3 seconds, then redirect
 setTimeout(() => {
-  window.location.href = "thank-you.html";
-}, 3000);
+  window.location.href = "thank_you.html";
+}, 500);
 
 
 
