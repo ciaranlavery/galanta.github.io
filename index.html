@@ -533,10 +533,7 @@
       if (window.scrollY > 700) toTop.classList.remove('hidden'); else toTop.classList.add('hidden');
     });
     toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // ===== HERO CAROUSEL =====
-  
-  (function(){
+(function(){
   const heroSlides = [
     // Tables
     { src: "images/oak_farmhouse.png",  alt: "Elmstead solid oak farmhouse table", link: "#tables" },
@@ -560,45 +557,75 @@
   const nextB = document.getElementById("heroNext");
   const box   = document.getElementById("heroCarousel");
 
-  let i = 0, timer = null;
+  let i = 0;
+  let timer = null;
+  let isTransitioning = false;
+  let fadeT = null;
   const INTERVAL = 5000;
 
-  // Build dots dynamically
+  // Preload helper
+  function preload(src) {
+    return new Promise((resolve, reject) => {
+      const im = new Image();
+      im.onload = () => resolve(src);
+      im.onerror = reject;
+      im.src = src;
+    });
+  }
+
   function renderDots() {
     dots.innerHTML = "";
     heroSlides.forEach((_, idx) => {
       const dot = document.createElement("button");
       dot.type = "button";
-      dot.className = "w-2.5 h-2.5 rounded-full border border-neutral-300 transition " +
-                      (idx === i ? "bg-brand-brown" : "bg-white/80 hover:bg-brand-amber/60");
+      dot.className =
+        "w-2.5 h-2.5 rounded-full border border-neutral-300 transition " +
+        (idx === i ? "bg-brand-brown" : "bg-white/80 hover:bg-brand-amber/60");
       dot.setAttribute("aria-label", `Go to slide ${idx + 1}`);
       dot.addEventListener("click", () => { goTo(idx); userInteract(); });
       dots.appendChild(dot);
     });
   }
 
-  function goTo(n) {
+  async function goTo(n) {
+    if (isTransitioning) return; // prevent overlap
+    isTransitioning = true;
+
+    // Clear any pending fade
+    if (fadeT) { clearTimeout(fadeT); fadeT = null; }
+
     i = (n + heroSlides.length) % heroSlides.length;
     const slide = heroSlides[i];
+
+    try {
+      // Preload before swapping to avoid stalls
+      await preload(slide.src);
+    } catch (_) {
+      // even if preload fails, attempt swap
+    }
+
+    // Fade out then swap, then fade in
     img.style.opacity = "0";
-    setTimeout(() => {
-      img.src = slide.src;
-      img.alt = slide.alt;
+    fadeT = setTimeout(() => {
+      img.src  = slide.src;
+      img.alt  = slide.alt;
       link.href = slide.link;
       img.style.opacity = "1";
       renderDots();
-    }, 180);
+      isTransitioning = false;
+      fadeT = null;
+    }, 120); // shorter than your interval, just for the fade
   }
 
-  function next() { goTo(i + 1); }
-  function prev() { goTo(i - 1); }
+  function next(){ goTo(i + 1); }
+  function prev(){ goTo(i - 1); }
 
-  function start() {
+  function start(){
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (!timer) timer = setInterval(next, INTERVAL);
+    if (!timer) timer = setInterval(() => { if (!isTransitioning) next(); }, INTERVAL);
   }
-  function stop() { clearInterval(timer); timer = null; }
-  function userInteract() { stop(); } // stop autoplay after interaction
+  function stop(){ clearInterval(timer); timer = null; }
+  function userInteract(){ stop(); } // stop autoplay after any user action
 
   // Controls
   nextB.addEventListener("click", () => { next(); userInteract(); });
@@ -615,7 +642,7 @@
     document.hidden ? stop() : start();
   });
 
-  // Keyboard navigation
+  // Keyboard nav
   box.setAttribute("tabindex", "0");
   box.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft")  { prev(); userInteract(); }
@@ -623,8 +650,8 @@
   });
 
   // Init
-  goTo(0);
   renderDots();
+  goTo(0);
   start();
 })();
   </script>
