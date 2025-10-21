@@ -9,14 +9,14 @@
   <meta name="keywords" content="handmade dining tables Belfast, kitchen tables Northern Ireland, wooden benches, solid oak table Belfast, extendable dining table, farmhouse table, modern dining table, bespoke furniture Belfast" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <link rel="canonical" href="https://galanta.github.io/" />
-  <link rel="preload" as="image" href="/images/hero-table.jpg" imagesrcset="/images/hero-table.jpg 1200w" imagesizes="(min-width: 768px) 50vw, 100vw" />
+  <link rel="preload" as="image" href="images/hero-table.jpg" imagesrcset="images/hero-table.jpg 1200w" imagesizes="(min-width: 768px) 50vw, 100vw" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Galánta Woodworks — Handmade Dining Tables in Belfast" />
   <meta property="og:description" content="Handcrafted wooden kitchen tables & benches. Built to order in Belfast. Delivery across Northern Ireland." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://galanta.github.io/" />
-  <meta property="og:image" content="/images/og-cover.jpg" />
+  <meta property="og:image" content="images/og-cover.jpg" />
   <meta property="og:locale" content="en_GB" />
   <meta name="theme-color" content="#5C3A1E" />
 
@@ -42,7 +42,7 @@
     }
   </script>
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🪵</text></svg>'">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🪵</text></svg>">
 
   <!-- LocalBusiness + ContactPoint + SiteNavigationElement -->
   <script type="application/ld+json">
@@ -75,17 +75,18 @@
   {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    "name": ["Tables","Benches","About","Contact"],
+    "name": ["Tables","Benches","Outdoor","About","Contact"],
     "url": [
       "https://galanta.github.io/#tables",
       "https://galanta.github.io/#benches",
+      "https://galanta.github.io/#outdoor",
       "https://galanta.github.io/#about",
       "https://galanta.github.io/#contact"
     ]
   }
   </script>
 
-  <!-- ImageObject graph (kept) -->
+  <!-- ImageObject graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -102,7 +103,7 @@
   }
   </script>
 
-  <!-- FAQ (kept) -->
+  <!-- FAQ -->
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"Do you deliver and install?","acceptedAnswer":{"@type":"Answer","text":"Yes, we deliver and install across Belfast and Northern Ireland."}},
@@ -110,32 +111,35 @@
   ]}
   </script>
 
+  <!-- Dynamic base for GitHub Pages -->
+  <base id="dynamic-base" href="./">
+  <script>
+    (function () {
+      const parts = location.pathname.split("/").filter(Boolean);
+      const isGitHubPages = location.hostname.endsWith("github.io");
+      const base = (isGitHubPages && parts.length > 0) ? ("/" + parts[0] + "/") : "./";
+      document.getElementById("dynamic-base")?.setAttribute("href", base);
+    })();
+  </script>
+
   <style>
     html { scroll-behavior: smooth; }
+    ::selection { background: #B18247; color: #fff; }
     @media (prefers-reduced-motion: reduce) {
       * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
 
-<base id="dynamic-base" href="./">
-<script>
-  (function () {
-    const parts = location.pathname.split("/").filter(Boolean);
-    const isGitHubPages = location.hostname.endsWith("github.io");
-    const base = (isGitHubPages && parts.length > 0) ? ("/" + parts[0] + "/") : "./";
-    document.getElementById("dynamic-base")?.setAttribute("href", base);
-  })();
-</script>
-
 <body class="bg-brand-cream text-neutral-900">
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-neutral-200">
+  <header class="sticky top-0 z-50 bg-brand-cream/90 backdrop-blur border-b border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="#home" class="text-xl font-semibold tracking-tight text-brand-brown">Galánta <span class="text-neutral-600">Woodworks</span></a>
       <button id="navToggle" class="md:hidden p-2 rounded-lg border border-neutral-200" aria-label="Open Menu">☰</button>
       <nav id="nav" class="hidden md:flex items-center gap-6" aria-label="Primary">
         <a href="#tables" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Tables</a>
         <a href="#benches" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Benches</a>
+        <a href="#outdoor" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Outdoor</a>
         <a href="#about" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">About</a>
         <a href="#contact" class="hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-brand-amber rounded">Contact</a>
       </nav>
@@ -144,73 +148,115 @@
       <div class="px-4 py-3 flex flex-col gap-3">
         <a href="#tables" class="hover:opacity-70">Tables</a>
         <a href="#benches" class="hover:opacity-70">Benches</a>
+        <a href="#outdoor" class="hover:opacity-70">Outdoor</a>
         <a href="#about" class="hover:opacity-70">About</a>
         <a href="#contact" class="hover:opacity-70">Contact</a>
       </div>
     </div>
   </header>
 
-  <!-- Delivery banner with soft gradient + high contrast -->
+  <!-- Delivery banner -->
   <section aria-label="Location and delivery" class="bg-gradient-to-r from-brand-brown-dark to-brand-brown text-white shadow-soft">
     <div class="max-w-6xl mx-auto px-4 py-2 text-sm text-center">
       Delivery available across <strong>Belfast</strong>, the <strong>Belfast Metropolitan Area</strong>, and throughout <strong>Northern Ireland</strong>.
     </div>
   </section>
 
-  <section id="home" class="relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-neutral-900">Handcrafted wooden kitchen tables & benches — built in Belfast. Built to last.</h1>
-        <p class="mt-4 text-neutral-700">Each Galánta piece is built to order in our Belfast workshop, using responsibly sourced natural materials. Designed to live with you for decades.</p>
-        <div class="mt-8 flex gap-3">
-          <a href="#tables" class="inline-block rounded-2xl px-5 py-3 bg-brand-brown text-white hover:bg-brand-brown-dark shadow-soft hover:shadow-lift transition will-change-transform">Browse Tables</a>
-          <a href="#contact" class="inline-block rounded-2xl px-5 py-3 border border-neutral-300 hover:bg-neutral-100">Request a Quote</a>
-        </div>
+<!-- Hero -->
+<section id="home" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-neutral-900">
+        Handcrafted wooden kitchen tables & benches — built in Belfast. Built to last.
+      </h1>
+      <p class="mt-4 text-neutral-700">
+        Each Galánta piece is built to order in our Belfast workshop, using responsibly sourced natural materials.
+        Designed to live with you for decades.
+      </p>
+      <div class="mt-8 flex gap-3">
+        <a href="#tables" class="inline-block rounded-2xl px-5 py-3 bg-brand-brown text-white hover:bg-brand-brown-dark shadow-soft hover:shadow-lift transition will-change-transform">Browse Tables</a>
+        <a href="#contact" class="inline-block rounded-2xl px-5 py-3 border border-brand-brown text-brand-brown hover:bg-brand-cream">Request a Quote</a>
       </div>
-      <figure class="rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition border border-neutral-200 bg-white">
-        <img src="/images/hero-table.jpg" alt="Solid oak dining table crafted in Belfast" width="1200" height="800" loading="eager" decoding="async" class="w-full h-full object-cover" />
-        <figcaption class="sr-only">Handcrafted solid-wood dining table</figcaption>
-      </figure>
     </div>
-  </section>
 
-  <section id="tables" class="py-16 border-t border-neutral-200 bg-white">
+    <!-- HERO CAROUSEL (auto + fixed ratio) -->
+    <div id="heroCarousel"
+         class="relative rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition border border-neutral-200 bg-white"
+         role="region" aria-roledescription="carousel" aria-label="Featured products">
+
+      <!-- Fixed ratio frame -->
+      <div class="relative aspect-[4/3] md:aspect-[3/2] bg-neutral-100">
+        <a id="heroLink" href="#tables" aria-label="View product" class="absolute inset-0 block">
+          <img
+            id="heroSlide"
+            src="images/oak_farmhouse.png"
+            alt="Elmstead solid oak farmhouse table"
+            width="1600" height="1000"
+            loading="eager" decoding="async"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+          />
+        </a>
+      </div>
+
+      <!-- Controls -->
+      <button id="heroPrev"
+              class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white p-2 border border-neutral-200 shadow-soft"
+              aria-label="Previous slide">‹</button>
+      <button id="heroNext"
+              class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/80 hover:bg-white p-2 border border-neutral-200 shadow-soft"
+              aria-label="Next slide">›</button>
+
+      <!-- Dots -->
+      <div id="heroDots"
+           class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 bg-white/70 backdrop-blur rounded-full px-2 py-1"
+           aria-label="Slide indicators"></div>
+
+      <!-- No-JS fallback -->
+      <noscript>
+        <img src="images/oak_farmhouse.png" alt="Elmstead solid oak farmhouse table"
+             width="1200" height="800" class="w-full h-full object-cover" />
+      </noscript>
+    </div>
+  </div>
+</section>
+
+  <!-- Tables -->
+  <section id="tables" class="py-16 border-t border-neutral-200 bg-brand-cream">
     <div class="max-w-6xl mx-auto px-6 md:px-8">
       <div class="flex items-end justify-between gap-6">
         <h2 class="text-3xl font-semibold text-neutral-900">Tables</h2>
-        
       </div>
 
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        <!-- Card -->
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/table-elmstead.jpg" alt="Elmstead solid oak farmhouse table" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/oak_farmhouse.png" alt="Elmstead solid oak farmhouse table" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg text-neutral-900">The Elmstead Farmhouse Table</h3>
-            <p class="mt-1 text-sm text-neutral-700">6ft solid oak, matte hand-oiled finish. Classic turned or square legs.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Farset</h3>
+            <p class="mt-1 text-sm text-neutral-700">Handcrafted in Belfast, the Farset Table blends clean modern design with timeless Irish craftsmanship. Its light oak finish and minimalist lines make it the perfect centrepiece for contemporary farmhouse interiors.</p>
           </div>
         </article>
 
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/table-nordic.jpg" alt="Nordic Edge ash dining table with chamfered edge" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/x_farmhouse.jpg" alt="Nordic Edge ash dining table with chamfered edge" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg text-neutral-900">The Nordic Edge Dining Table</h3>
-            <p class="mt-1 text-sm text-neutral-700">Scandi-inspired ash top with chamfered edge and tapered legs.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Blackstaff</h3>
+            <p class="mt-1 text-sm text-neutral-700">Built with solid timber and traditional joinery, the Blackstaff Table embodies Belfast’s industrial heritage and enduring strength. A rustic X-frame base and natural wood grain give it a bold, authentic farmhouse feel.</p>
           </div>
         </article>
 
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/table-extendable.jpg" alt="Extendable solid-wood dining table with hidden leaves" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/turned_legs.jpg" alt="Extendable solid-wood dining table with hidden leaves" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
-            <h3 class="font-semibold text-lg text-neutral-900">The Gather Extendable</h3>
-            <p class="mt-1 text-sm text-neutral-700">Clean-lined table with hidden extension leaves for hosting.</p>
+            <h3 class="font-semibold text-lg text-neutral-900">The Roe</h3>
+            <p class="mt-1 text-sm text-neutral-700">The Roe Table pairs a natural oak top with dark, turned legs for a striking contrast inspired by Northern Ireland’s landscapes. Elegant, durable, and full of character — a statement of handcrafted quality</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="benches" class="py-16 border-t border-neutral-200">
+  <!-- Benches -->
+  <section id="benches" class="py-16 border-t border-neutral-200 bg-brand-cream">
     <div class="max-w-6xl mx-auto px-6 md:px-8">
       <div class="flex items-end justify-between gap-6">
         <h2 class="text-3xl font-semibold text-neutral-900">Benches</h2>
@@ -218,7 +264,7 @@
 
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/bench-riveted.jpg" alt="Riveted solid-wood bench with exposed joinery" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/japanese_bench.jpg" alt="Riveted solid-wood bench with exposed joinery" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold text-lg text-neutral-900">The Riveted Bench</h3>
             <p class="mt-1 text-sm text-neutral-700">Exposed joinery details and a sturdy stance — built to match The Elmstead.</p>
@@ -226,7 +272,7 @@
         </article>
 
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/bench-slab.jpg" alt="Live-edge slab bench in solid hardwood" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/oak_studio_bench.jpg" alt="Live-edge slab bench in solid hardwood" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold text-lg text-neutral-900">The Slab Bench</h3>
             <p class="mt-1 text-sm text-neutral-700">Single-slab top with softened live edge and stabilising bowties.</p>
@@ -234,7 +280,7 @@
         </article>
 
         <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
-          <img src="/images/bench-minimal.jpg" alt="Minimal oak bench with tapered legs" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
+          <img src="images/stocky_bench.jpg" alt="Minimal oak bench with tapered legs" width="800" height="560" loading="lazy" decoding="async" class="h-56 w-full object-cover" />
           <div class="p-5">
             <h3 class="font-semibold text-lg text-neutral-900">The Minimal Bench</h3>
             <p class="mt-1 text-sm text-neutral-700">Lightweight silhouette with tapered legs and rounded corners.</p>
@@ -243,22 +289,95 @@
       </div>
     </div>
   </section>
-  
-  <section id="about" class="py-16 border-t border-neutral-200 bg-white">
+
+  <!-- Outdoor -->
+  <section id="outdoor" class="py-16 border-t border-neutral-200 bg-brand-cream">
+    <div class="max-w-6xl mx-auto px-6 md:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="rounded-3xl overflow-hidden shadow-soft border border-neutral-200 bg-white">
+          <img src="images/outdoor_set.jpg" alt="Outdoor dining set in a garden — solid timber table with matching bench and bench with back" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold text-neutral-900">Outdoor Dining Set</h2>
+          <p class="mt-3 text-neutral-700">
+            Built for Irish weather. Solid, pressure-treated timber with clean lines and generous proportions.
+            Choose the set or mix individual pieces: a sturdy bench, a comfortable bench with back, and a matching table.
+          </p>
+          <ul class="mt-4 text-neutral-700 list-disc pl-5">
+            <li>Materials: pressure-treated softwood (upgrade to oak on request)</li>
+            <li>Sizes: 200 / 300&nbsp;cm length</li>
+            <li>Lead time: 2–3 weeks</li>
+          </ul>
+          <div class="mt-6">
+            <a href="#contact" class="inline-block rounded-2xl px-5 py-3 bg-brand-brown text-white hover:bg-brand-brown-dark shadow-soft hover:shadow-lift">
+              Get a quote for outdoor set
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <!-- Outdoor Table -->
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="images/outdoor_table.jpg" alt="Solid timber outdoor table with thick top and A-frame bracing" class="h-56 w-full object-cover" loading="lazy" />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-neutral-900">Outdoor Table</h3>
+            <p class="mt-1 text-sm text-neutral-700">Thick top boards with eased edges, sturdy legs and central bracing.</p>
+            <ul class="mt-3 text-sm text-neutral-700 list-disc pl-5"><li>Lengths: 200 / 300&nbsp;cm</li></ul>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-neutral-500">Made to order</span>
+              <a href="#contact" class="text-sm font-medium underline">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Outdoor Bench -->
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="images/outdoor_bench.jpg" alt="Outdoor backless bench in solid timber with chunky legs" class="h-56 w-full object-cover" loading="lazy" />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-neutral-900">Outdoor Bench</h3>
+            <p class="mt-1 text-sm text-neutral-700">Simple, solid backless bench to slide under the table when not in use.</p>
+            <ul class="mt-3 text-sm text-neutral-700 list-disc pl-5"><li>Lengths: 200 / 300&nbsp;cm</li></ul>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-neutral-500">Made to order</span>
+              <a href="#contact" class="text-sm font-medium underline">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Outdoor Bench with Back -->
+        <article class="group rounded-3xl overflow-hidden border border-neutral-200 bg-brand-cream shadow-soft hover:shadow-lift hover:-translate-y-0.5 transition">
+          <img src="images/outdoor_bench_with_back.jpg" alt="Outdoor bench with backrest in solid timber" class="h-56 w-full object-cover" loading="lazy" />
+          <div class="p-5">
+            <h3 class="font-semibold text-lg text-neutral-900">Outdoor Bench with Back</h3>
+            <p class="mt-1 text-sm text-neutral-700">Supportive backrest for long lunches. Pair one side with the table, or use standalone.</p>
+            <ul class="mt-3 text-sm text-neutral-700 list-disc pl-5"><li>Lengths: 200 / 300&nbsp;cm</li></ul>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-neutral-500">Made to order</span>
+              <a href="#contact" class="text-sm font-medium underline">Enquire</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 border-t border-neutral-200 bg-brand-cream">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl font-semibold text-neutral-900">Crafted with precision, finished with care</h2>
         <p class="mt-4 text-neutral-700">Each Galánta table and bench is made to order in our Belfast workshop using responsibly sourced oak, ash, and walnut. Every piece is joined, finished, and inspected by hand to ensure durability for everyday family life.</p>
-        
       </div>
       <figure class="rounded-3xl overflow-hidden shadow-soft hover:shadow-lift transition border border-neutral-200 bg-white">
-        <img src="/images/workshop.jpg" alt="Belfast workshop — hand tools and hardwood boards" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+        <img src="images/workshop.jpg" alt="Belfast workshop — hand tools and hardwood boards" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-full object-cover" />
         <figcaption class="sr-only">Workshop detail</figcaption>
       </figure>
     </div>
   </section>
 
-  <section id="contact" class="py-16 border-t border-neutral-200">
+  <!-- Contact -->
+  <section id="contact" class="py-16 border-t border-neutral-200 bg-brand-cream">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-3xl font-semibold text-neutral-900">Get a quote</h2>
       <p class="mt-2 text-neutral-700">Tell us what you’re after — the model, dimensions, and wood. We’ll get back with a lead time and quote.</p>
@@ -287,7 +406,9 @@
             <option>The Riveted Bench</option>
             <option>The Slab Bench</option>
             <option>The Minimal Bench</option>
-            <option>Custom build</option>
+            <option>Outdoor Table</option>
+            <option>Outdoor Bench</option>
+            <option>Outdoor Bench with Back</option>
           </select>
         </div>
 
@@ -295,31 +416,26 @@
           <div>
             <label class="block text-sm mb-1" for="length">Length (ft)</label>
             <select id="length" name="length" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-          </select>
+              <option>6</option><option>7</option><option>8</option>
+            </select>
           </div>
           <div>
             <label class="block text-sm mb-1" for="wood">Wood</label>
             <select id="wood" name="wood" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
-            <option>Oak</option>
-            <option>Ash</option>
-            <option>Walnut</option>
-          </select>
+              <option>Oak</option><option>Ash</option><option>Walnut</option>
+            </select>
           </div>
           <div>
             <label class="block text-sm mb-1" for="finish">Finish</label>
-            <select id="finish" name="finsih" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
-            <option>Hardwax oil</option>
-            <option>Untreated</option>
-          </select>
+            <select id="finish" name="finish" class="w-full rounded-xl border border-neutral-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-amber">
+              <option>Hardwax oil</option><option>Untreated</option>
+            </select>
           </div>
         </div>
 
         <div>
           <label class="block text-sm mb-1" for="message">Details</label>
-          <textarea id="message" name="message" rows="5" class="w-full rounded-xl border border-neutral-300 px-3 py-2" placeholder="Room size, leg style, deadlines, delivery location…"></textarea>
+          <textarea id="message" name="message" rows="5" class="w-full rounded-xl border border-neutral-300 px-3 py-2" placeholder="Delivery location…"></textarea>
         </div>
 
         <div class="flex items-center gap-3">
@@ -332,7 +448,8 @@
     </div>
   </section>
 
-  <footer class="border-t border-neutral-200 bg-white">
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-brand-cream">
     <div class="max-w-6xl mx-auto px-4 py-10 text-center text-sm text-neutral-600">
       <div class="space-y-4">
         <div>
@@ -346,6 +463,7 @@
             <ul class="space-y-1">
               <li><a href="#tables" class="hover:underline">Tables</a></li>
               <li><a href="#benches" class="hover:underline">Benches</a></li>
+              <li><a href="#outdoor" class="hover:underline">Outdoor</a></li>
               <li><a href="#about" class="hover:underline">About</a></li>
               <li><a href="#contact" class="hover:underline">Contact</a></li>
             </ul>
@@ -366,12 +484,12 @@
     </div>
   </footer>
 
-  <!-- Sticky mobile CTA (trending pattern) -->
+  <!-- Sticky mobile CTA -->
   <div class="fixed bottom-3 inset-x-3 md:hidden">
     <a href="#contact" class="block text-center rounded-2xl px-5 py-3 bg-brand-brown text-white shadow-lift">Get a quote — delivery across Belfast & NI</a>
   </div>
 
-  <!-- Back-to-top button -->
+  <!-- Back-to-top -->
   <button id="toTop" aria-label="Back to top" class="hidden fixed bottom-20 right-4 rounded-full p-3 bg-white border border-neutral-200 shadow-soft hover:shadow-lift">
     ↑
   </button>
@@ -415,6 +533,100 @@
       if (window.scrollY > 700) toTop.classList.remove('hidden'); else toTop.classList.add('hidden');
     });
     toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== HERO CAROUSEL =====
+  
+  (function(){
+  const heroSlides = [
+    // Tables
+    { src: "images/oak_farmhouse.png",  alt: "Elmstead solid oak farmhouse table", link: "#tables" },
+    { src: "images/x_farmhouse.jpg",    alt: "Nordic Edge ash dining table with chamfered edge", link: "#tables" },
+    { src: "images/turned_legs.jpg",    alt: "Extendable solid-wood dining table with hidden leaves", link: "#tables" },
+    // Benches
+    { src: "images/japanese_bench.jpg",   alt: "Riveted solid-wood bench with exposed joinery", link: "#benches" },
+    { src: "images/oak_studio_bench.jpg", alt: "Live-edge slab bench in solid hardwood", link: "#benches" },
+    { src: "images/stocky_bench.jpg",     alt: "Minimal oak bench with tapered legs", link: "#benches" },
+    // Outdoor
+    { src: "images/outdoor_set.jpg",      alt: "Outdoor dining set — table with bench and bench with back", link: "#outdoor" },
+    { src: "images/outdoor_table.jpg",    alt: "Solid timber outdoor table with thick top and bracing", link: "#outdoor" },
+    { src: "images/outdoor_bench.jpg",    alt: "Outdoor backless bench in solid timber", link: "#outdoor" },
+    { src: "images/outdoor_bench_with_back.jpg", alt: "Outdoor bench with backrest in solid timber", link: "#outdoor" }
+  ];
+
+  const img   = document.getElementById("heroSlide");
+  const link  = document.getElementById("heroLink");
+  const dots  = document.getElementById("heroDots");
+  const prevB = document.getElementById("heroPrev");
+  const nextB = document.getElementById("heroNext");
+  const box   = document.getElementById("heroCarousel");
+
+  let i = 0, timer = null;
+  const INTERVAL = 5000;
+
+  // Build dots dynamically
+  function renderDots() {
+    dots.innerHTML = "";
+    heroSlides.forEach((_, idx) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "w-2.5 h-2.5 rounded-full border border-neutral-300 transition " +
+                      (idx === i ? "bg-brand-brown" : "bg-white/80 hover:bg-brand-amber/60");
+      dot.setAttribute("aria-label", `Go to slide ${idx + 1}`);
+      dot.addEventListener("click", () => { goTo(idx); userInteract(); });
+      dots.appendChild(dot);
+    });
+  }
+
+  function goTo(n) {
+    i = (n + heroSlides.length) % heroSlides.length;
+    const slide = heroSlides[i];
+    img.style.opacity = "0";
+    setTimeout(() => {
+      img.src = slide.src;
+      img.alt = slide.alt;
+      link.href = slide.link;
+      img.style.opacity = "1";
+      renderDots();
+    }, 180);
+  }
+
+  function next() { goTo(i + 1); }
+  function prev() { goTo(i - 1); }
+
+  function start() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!timer) timer = setInterval(next, INTERVAL);
+  }
+  function stop() { clearInterval(timer); timer = null; }
+  function userInteract() { stop(); } // stop autoplay after interaction
+
+  // Controls
+  nextB.addEventListener("click", () => { next(); userInteract(); });
+  prevB.addEventListener("click", () => { prev(); userInteract(); });
+
+  // Pause on hover/focus
+  box.addEventListener("mouseenter", stop);
+  box.addEventListener("mouseleave", start);
+  box.addEventListener("focusin", stop);
+  box.addEventListener("focusout", start);
+
+  // Pause when tab hidden
+  document.addEventListener("visibilitychange", () => {
+    document.hidden ? stop() : start();
+  });
+
+  // Keyboard navigation
+  box.setAttribute("tabindex", "0");
+  box.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft")  { prev(); userInteract(); }
+    if (e.key === "ArrowRight") { next(); userInteract(); }
+  });
+
+  // Init
+  goTo(0);
+  renderDots();
+  start();
+})();
   </script>
 </body>
 </html>
